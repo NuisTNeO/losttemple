@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<game_map index="1" width="25" height="25" name="simple_map" default_terrain="0" user_level_limit="0">
+	<cell xIndex="1" yIndex="1" terrain="1"/>
+	<cell xIndex="1" yIndex="2" terrain="1"/>
+	<cell xIndex="1" yIndex="3" terrain="1"/>
+	<cell xIndex="1" yIndex="4" terrain="1"/>
+	<cell xIndex="1" yIndex="5" terrain="1"/>
+</game_map> 
