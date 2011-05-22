@@ -2,7 +2,7 @@ package cn.com.hotmaze.entity;
 
 import cn.com.hotmaze.util.Vec2;
 
-public class MoveEntity {
+public abstract class MoveEntity {
 
 	private double speed;
 	
@@ -13,9 +13,13 @@ public class MoveEntity {
 	public MoveEntity() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public abstract  boolean canMoveToTarget(Vec2 target);
 
 	public void move_to(Vec2 target){
-		Vec2 tmp = position.sub(target);
+		if(canMoveToTarget(target)){
+			this.position = target;
+		}
 	}
 	
 }

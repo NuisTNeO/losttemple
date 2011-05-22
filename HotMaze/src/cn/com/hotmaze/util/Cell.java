@@ -51,9 +51,4 @@ public class Cell {
 	public void setTerrain(int terrain) {
 		this.terrain = terrain;
 	}
-	
-	//TODO
-	public boolean beBlocked(int player_state){
-		return true;
-	}
 }

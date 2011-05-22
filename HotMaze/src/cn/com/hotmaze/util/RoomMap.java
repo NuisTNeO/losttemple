@@ -1,5 +1,7 @@
 package cn.com.hotmaze.util;
 
+import cn.com.hotmaze.entity.MoveEntity;
+
 public class RoomMap {
 	
 	private int mapId;
@@ -28,6 +30,11 @@ public class RoomMap {
 		
 	}
 	
+	//TODO
+	void reSet(){
+		
+	}
+	
 	void InitCell(int xIndex,int yIndex,int cellTerrain){
 		if(xIndex > widthCell || yIndex > heightCell){
 			return;
@@ -35,12 +42,18 @@ public class RoomMap {
 		this.mapCell[xIndex][yIndex] = new Cell(xIndex,yIndex,cellTerrain);		
 	}
 	
-	boolean CanMoveToCell(int xIndex, int yIndex,){
-		
+	public Cell getCellInfoByVec(Vec2 target){
+		return getCellInfoByXY((int)target.x,(int)target.y);
 	}
 	
-	boolean CanMoveTo(int xPos,int yPos){
-		return true;
+	public Cell getCellInfoByXY(int x,int y){
+		int xIndex = x/25;
+		int yIndex = y/25;
+		return getCellInfoByIndex(xIndex,yIndex);
+	}
+	
+	public Cell getCellInfoByIndex(int x,int y){
+		return this.mapCell[x][y];
 	}
 	
 }
