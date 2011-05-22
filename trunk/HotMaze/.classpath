@@ -4,16 +4,29 @@
 	<classpathentry kind="src" path="cfg"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TransServer"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/dist/mina-core-2.0.2.jar" sourcepath="F:/developer jar/apache-mina-2.0.2-src.zip"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/commons-lang-2.5.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/commons-logging-1.0.3.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/javassist-3.7.ga.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/jcl-over-slf4j-1.5.11.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/jzlib-1.0.7.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/ognl-2.7.3.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/spring-2.5.6.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/tomcat-apr-5.5.23.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/apache-mina-2.0.2/lib/xbean-spring-3.6.jar"/>
-	<classpathentry kind="lib" path="F:/developer jar/slf4j-1.6.1/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/commons-logging-1.0.3.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/flex-messaging-common.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/flex-messaging-core.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/flex-messaging-opt.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/flex-messaging-proxy.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/flex-messaging-remoting.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/javassist-3.7.ga.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/jcl-over-slf4j-1.5.11.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/jzlib-1.0.7.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-core-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-example-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-filter-compression-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-integration-beans-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-integration-jmx-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-integration-ognl-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-integration-xbean-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-statemachine-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/mina-transport-apr-2.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/ognl-2.7.3.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/slf4j-api-1.5.11.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/spring-2.5.6.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/tomcat-apr-5.5.23.jar"/>
+	<classpathentry kind="lib" path="E:/快盘/proje1ct/project/lib/xbean-spring-3.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
