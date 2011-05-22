@@ -246,9 +246,4 @@ public class Vec2 {
                         return false;
                 return true;
         }
-        
-        public double distanceToTarget(Vec2 target){
-        	return Math.sqrt((this.x - target.x)*(this.x - target.x) + (this.y - target.y)*(this.y - target.y));
-        }
-        
 }
