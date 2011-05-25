@@ -5,6 +5,7 @@
  */
 package cn.com.hotmaze.common;
 
+import cn.com.hotmaze.context.MapContext;
 import cn.com.neo.common.StartServer;
 
 /**
@@ -26,7 +27,7 @@ public class ServerRun {
 		StartServer server = new StartServer();
 		server.start(new TransServerHandler());
 		
-		
+		MapContext.getInstance();
 		
 		
 	}
