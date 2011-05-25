@@ -4,14 +4,14 @@ import cn.com.hotmaze.entity.MoveEntity;
 
 public class RoomMap {
 	
-	private int mapId;
+	private String mapId;
 	
 	private int widthCell;
 	
 	private int heightCell;
 	
 	private int mapWidth;
-	
+
 	private int mapHeight;
 	
 	private int defaultCellTerrain;
@@ -21,17 +21,17 @@ public class RoomMap {
 	
 	private Cell[][] mapCell;
 	
-	public RoomMap(int mapId) {
+	public RoomMap(String mapId) {
 		// TODO Auto-generated constructor stub
 		Init(mapId);
 	}
 
-	void Init(int mapId){
+	public void Init(String mapId){
 		
 	}
 	
 	//TODO
-	void reSet(){
+	public void reSet(){
 		
 	}
 	
