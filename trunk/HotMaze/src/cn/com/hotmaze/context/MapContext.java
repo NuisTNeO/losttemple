@@ -11,9 +11,15 @@ public class MapContext {
 	private static ConcurrentMap<String, RoomMap> map = new ConcurrentHashMap<String, RoomMap>();
 	
 	
-	private MapContext() {}  
+	private MapContext() {
+		init();
+	}  
     
     private static MapContext single;  
+    
+    private void init(){
+    	System.out.println("载入所有地图");
+    }
       
     static{  
         single = new MapContext();  
