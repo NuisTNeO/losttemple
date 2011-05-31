@@ -9,11 +9,11 @@ package cn.com.hotmaze.model;
  */
 public interface IBattleModel {
 
-	public void initBattle();
-	
 	public void clear();
 	
 	public boolean isGameOver();
+
+	void initBattle(String map_id);
 	
 	
 }

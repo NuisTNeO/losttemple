@@ -1,10 +1,14 @@
 package cn.com.hotmaze.util;
 
-import cn.com.hotmaze.entity.MoveEntity;
+import java.util.Iterator;
+
+import org.dom4j.Element;
 
 public class RoomMap {
 	
 	private String mapId;
+	
+	private String mapName;
 	
 	private int widthCell;
 	
@@ -21,12 +25,40 @@ public class RoomMap {
 	
 	private Cell[][] mapCell;
 	
-	public RoomMap(String mapId) {
+	public RoomMap(String mapFilePath) {
 		// TODO Auto-generated constructor stub
-		Init(mapId);
+		Init(mapFilePath);
 	}
 
-	public void Init(String mapId){
+	public void Init(String mapPath){
+	   	XMLdoc doc = new XMLdoc(mapPath);
+    	doc.openXML();
+		Element root = doc.getRootElement();
+		this.mapId = root.attributeValue("index");
+		this.mapName = root.attributeValue("map_name");
+		this.widthCell = Integer.valueOf(root.attributeValue("width"));
+		this.heightCell = Integer.valueOf(root.attributeValue("height"));
+		this.defaultCellTerrain = Integer.valueOf(root.attributeValue("default_terrain"));
+		this.userLevelLimit = Integer.valueOf(root.attributeValue("user_level_limit"));
+		mapCell = new Cell[25][25];
+		
+		for(int height=0;height<this.heightCell;height++)
+		{
+			for(int width=0;width<this.widthCell;width++)
+			{
+				mapCell[height][width] = new Cell(defaultCellTerrain,height,width);
+			}
+		}
+		
+		for(Iterator itr = root.elementIterator();itr.hasNext();){
+			Element el = (Element) itr.next();
+			int x = Integer.valueOf(el.attributeValue("xIndex"));
+			int y = Integer.valueOf(el.attributeValue("yIndex"));
+			int terrain = Integer.valueOf(el.attributeValue("terrain"));
+			mapCell[y][x].setTerrain(terrain);
+			System.out.println("µØÐÎx:"+x+" y:"+y+" Îª"+terrain);
+		}
+		doc.closeXML();
 		
 	}
 	

@@ -8,6 +8,30 @@ public abstract class MoveEntity {
 	
 	private Vec2 position;
 	
+	public double getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(double speed) {
+		this.speed = speed;
+	}
+
+	public Vec2 getPosition() {
+		return position;
+	}
+
+	public void setPosition(Vec2 position) {
+		this.position = position;
+	}
+
+	public Vec2 getHeading() {
+		return heading;
+	}
+
+	public void setHeading(Vec2 heading) {
+		this.heading = heading;
+	}
+
 	private Vec2 heading;
 	
 	public MoveEntity() {

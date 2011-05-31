@@ -3,6 +3,8 @@
  */
 package cn.com.hotmaze.entity;
 
+import cn.com.hotmaze.util.Vec2;
+
 /**
  * @author singerinsky
  *
