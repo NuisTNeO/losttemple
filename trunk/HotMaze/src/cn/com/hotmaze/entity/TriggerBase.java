@@ -10,11 +10,10 @@ package cn.com.hotmaze.entity;
 public abstract class TriggerBase {
 
 	private int id;
-	private int xIndex;
-	private int yIndex;
 	private int type;
 	private long cd;
 	private int state;
+	private Vec2 pos;
 	
 	public int getId() {
 		return id;
@@ -22,22 +21,6 @@ public abstract class TriggerBase {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public int getXIndex() {
-		return xIndex;
-	}
-
-	public void setXIndex(int index) {
-		xIndex = index;
-	}
-
-	public int getYIndex() {
-		return yIndex;
-	}
-
-	public void setYIndex(int index) {
-		yIndex = index;
 	}
 
 	public int getType() {
@@ -56,6 +39,14 @@ public abstract class TriggerBase {
 		this.cd = cd;
 	}
 
+	public Vec2 getPos(){
+		return this.pos;
+	}
+
+	public void setPos(Vec2 pos){
+		this.pos = pos;
+	}
+
 	public int getState() {
 		return state;
 	}
@@ -64,12 +55,11 @@ public abstract class TriggerBase {
 		this.state = state;
 	}
 
-	public TriggerBase(int id, int type, int index, int index2,int state) {
+	public TriggerBase(int id, int type,Vec2 pos,int state) {
 		super();
 		this.id = id;
 		this.type = type;
-		this.xIndex = index;
-		this.yIndex = index2;
+		this.pos = pos;
 		this.state = state;
 	}
 
