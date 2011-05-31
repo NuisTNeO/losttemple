@@ -15,11 +15,17 @@ public class BattleRoom {
 	
 	private int roomId;
 	
-	private String mapId;
+	private  RoomMap map;
 	
 	private ArrayList<Role> playerList;
 	
+	private ArrayList<TriggerBase> triggerList;	
 	
+	BattleRoom(){
+		
+	}	
+
 	
+
 
 }
