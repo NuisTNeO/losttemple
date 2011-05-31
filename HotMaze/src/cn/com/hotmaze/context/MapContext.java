@@ -4,7 +4,13 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+
+import org.dom4j.Attribute;
+import org.dom4j.Element;
+
+
 import cn.com.hotmaze.util.RoomMap;
+import cn.com.hotmaze.util.XMLdoc;
 
 public class MapContext {
 
@@ -19,6 +25,16 @@ public class MapContext {
     
     private void init(){
     	System.out.println("载入所有地图");
+    	XMLdoc doc = new XMLdoc("res/map/map_list.xml");
+    	doc.openXML();
+    	Element root = doc.getRootElement();
+    	for(Iterator itr = root.elementIterator();itr.hasNext();){
+    		Element em = (Element) itr.next();
+    		Attribute index = em.attribute("map_name");
+    		System.out.println("载入地图 "+index.getValue()+".....");
+    		RoomMap map = new RoomMap("res/map/"+index.getValue()+".xml");
+    	}
+    	doc.closeXML();
     }
       
     static{  
@@ -32,9 +48,9 @@ public class MapContext {
         return single;  
     }  
 	
-	public RoomMap getRoomMapById(String mapName){
-		RoomMap map = ((Map<String, RoomMap>) MapContext.map).get(mapName);
-		System.out.println("can't find map "+mapName);
+	public RoomMap createMapById(String map_id){
+		RoomMap map = ((Map<String, RoomMap>) MapContext.map).get(map_id);
+		System.out.println("can't find map "+map_id);
 		assert(map != null);
 		return map;
 	}

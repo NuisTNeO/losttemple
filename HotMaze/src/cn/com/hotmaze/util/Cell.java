@@ -16,7 +16,7 @@ public class Cell {
 	private int terrain;
 	
 	//position of left top corn
-	Vec2 position;
+	Vec2 position = new Vec2();
 	
 	
 	public Cell(int terrain, int index, int index2) {

@@ -4,6 +4,7 @@
 package cn.com.hotmaze.entity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import cn.com.hotmaze.util.RoomMap;
 
@@ -17,15 +18,22 @@ public class BattleRoom {
 	
 	private  RoomMap map;
 	
+	private HashMap<String, TriggerBase> triggerMap;
+	
 	private ArrayList<Role> playerList;
 	
-	private ArrayList<TriggerBase> triggerList;	
+	public Role getRoleById(int id){
+		return null;
+	}
 	
 	BattleRoom(){
 		
 	}	
 
 	
-
+	
+	
+	
+	
 
 }
