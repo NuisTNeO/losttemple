@@ -17,7 +17,7 @@ public class BrigdeTrigger extends TriggerBase {
 	 * @param index
 	 * @param index2
 	 */
-	public BrigdeTrigger(int id, int type, Vec2 pos,int state) {
+	public BrigdeTrigger(String id, int type, Vec2 pos,int state) {
 		super(id, type, pos,state);
 		// TODO Auto-generated constructor stub
 	}

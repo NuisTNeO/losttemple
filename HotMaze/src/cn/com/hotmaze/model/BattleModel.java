@@ -31,16 +31,11 @@ public  class BattleModel implements IBattleModel {
 	
 	private RoomMap	map;
 	
-	private List<TriggerBase> triggers = new ArrayList<TriggerBase>();
-	
-	private HashMap<Integer, TriggerBase> triggerMap = new HashMap<Integer, TriggerBase>();
-	
 	public void clear() {
 		
 		allUsers.clear();
 		redUsers.clear();
 		blueUsers.clear();
-		triggerMap.clear();
 	}
 
 
