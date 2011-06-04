@@ -28,11 +28,12 @@ public class MapContext {
     	XMLdoc doc = new XMLdoc("res/map/map_list.xml");
     	doc.openXML();
     	Element root = doc.getRootElement();
-    	for(Iterator itr = root.elementIterator();itr.hasNext();){
+    	for(Iterator<?> itr = root.elementIterator();itr.hasNext();){
     		Element em = (Element) itr.next();
     		Attribute index = em.attribute("map_name");
     		System.out.println("‘ÿ»ÎµÿÕº "+index.getValue()+".....");
     		RoomMap map = new RoomMap("res/map/"+index.getValue()+".xml");
+    		MapContext.map.putIfAbsent(index.getValue(),map);
     	}
     	doc.closeXML();
     }
@@ -52,7 +53,7 @@ public class MapContext {
 		RoomMap map = ((Map<String, RoomMap>) MapContext.map).get(map_id);
 		System.out.println("can't find map "+map_id);
 		assert(map != null);
-		return map;
+		return map.clone();
 	}
 	
 	public void reloadAllMap(){

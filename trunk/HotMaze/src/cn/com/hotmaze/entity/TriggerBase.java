@@ -3,6 +3,9 @@
  */
 package cn.com.hotmaze.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.com.hotmaze.util.Vec2;
 
 /**
@@ -11,17 +14,30 @@ import cn.com.hotmaze.util.Vec2;
  */
 public abstract class TriggerBase {
 
-	private int id;
+	private String id;
 	private int type;
 	private long cd;
 	private int state;
+	private String mappingId;
+	private List<Integer> actionPoints = new ArrayList();
+	
+	public String getMappingId() {
+		return mappingId;
+	}
+
+	public void setMappingId(String mappingId) {
+		this.mappingId = mappingId;
+	}
+
+
+
 	private Vec2 pos;
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -57,15 +73,18 @@ public abstract class TriggerBase {
 		this.state = state;
 	}
 
-	public TriggerBase(int id, int type,Vec2 pos,int state) {
+	public TriggerBase(String id2, int type,Vec2 pos,int state) {
 		super();
-		this.id = id;
+		this.id = id2;
 		this.type = type;
 		this.pos = pos;
 		this.state = state;
 	}
 
-
+	public void addActionPoint(String offset){
+		this.actionPoints.add(Integer.valueOf(offset));
+	}
+	
 	
 	private long lastExecuteTime;
 	
@@ -91,5 +110,14 @@ public abstract class TriggerBase {
 		execute(role);
 	}
 	
-	
+	public TriggerBase clone(){
+		TriggerBase tmp = null;
+		try {
+			tmp = (TriggerBase) super.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return tmp;
+	}
 }

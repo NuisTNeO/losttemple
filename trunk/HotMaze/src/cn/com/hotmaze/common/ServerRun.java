@@ -6,6 +6,7 @@
 package cn.com.hotmaze.common;
 
 import cn.com.hotmaze.context.MapContext;
+import cn.com.hotmaze.context.TriggerContext;
 import cn.com.neo.common.StartServer;
 
 /**
@@ -28,6 +29,7 @@ public class ServerRun {
 		server.start(new TransServerHandler());
 		
 		MapContext.getInstance();
+		TriggerContext.getInstance();
 		
 		
 	}
