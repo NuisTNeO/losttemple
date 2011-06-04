@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+   <server host="116.232.45.187" port="8888"></server>
+   <resources>
+         <resource url="assets/swf/UI.swf" dataformat="swf"/>
+         <resource url="assets/swf/basci.swf" dataformat="swf"/>
+   </resources>
+</data>
