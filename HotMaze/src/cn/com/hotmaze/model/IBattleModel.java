@@ -14,6 +14,8 @@ public interface IBattleModel {
 	public boolean isGameOver();
 
 	void initBattle(String map_id);
+
+	public int getBattleID();
 	
 	
 }
