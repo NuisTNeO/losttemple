@@ -32,4 +32,12 @@ public class Role extends MoveEntity{
 		return false;
 	}
 
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
+
+	public int getRoleId() {
+		return roleId;
+	}
+
 }

@@ -31,6 +31,10 @@ public  class BattleModel implements IBattleModel {
 	
 	private RoomMap	map;
 	
+	public BattleModel(int battleid) {
+		this.setBattleID(battleid);
+	}
+	
 	public void clear() {
 		
 		allUsers.clear();
@@ -50,6 +54,14 @@ public  class BattleModel implements IBattleModel {
 	public boolean isGameOver() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public void setBattleID(int battleID) {
+		this.battleID = battleID;
+	}
+
+	public int getBattleID() {
+		return battleID;
 	}
 	
 }
