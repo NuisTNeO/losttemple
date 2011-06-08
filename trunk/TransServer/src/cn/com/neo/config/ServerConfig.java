@@ -19,7 +19,7 @@ public class ServerConfig {
 	static {
 		try {
 			System.out.println("读取配置文件server.properties");
-			prop = PropertiesUtil.getInstance("..\\cfg\\server.properties");
+			prop = PropertiesUtil.getInstance("cfg\\server.properties");
 		} catch (Exception e) {
 			System.out.println("读取server.properties文件出错！");
 			e.printStackTrace();
