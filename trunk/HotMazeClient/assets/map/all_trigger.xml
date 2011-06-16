@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<trigger_list>
+<!-- type 是机关的类型，mapping_id是备用字段-->
+	<trigger id="1" type="1" mapping_id="8" cd="10">
+		<!-- 触发机关的格子的索引,已经在九宫格里面的相对的位置-->
+		<action_point index="1" action_offset="1"/>
+		<action_point index="2" action_offset="2"/>
+	</trigger> 
+</trigger_list>
