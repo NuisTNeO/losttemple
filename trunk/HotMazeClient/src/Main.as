@@ -152,7 +152,7 @@ package
 		   var decode:SocketDecode = new SocketDecode();
 		   decode.addDecode(TestDecode.TYPE,new TestDecode);
 		   socketSRV.createSocketServer(SocketFactory.SOCKET_BASE);
-		   socketSRV.connect("127.0.0.1",1139,decode);
+		   socketSRV.connect("192.168.1.100",8889,decode);
 		   socketSRV.send("test",{data:"你好潘亮"});
 		   //socketSRV.close();
 		  /* var v:Vector.<Function> = new Vector.<Function>();
