@@ -1,10 +1,11 @@
 package
 {
 	
-	import com.hotmaze.battle.control.RoleAnimator;
 	import com.hotmaze.battle.control.RoleControl;
+	import com.hotmaze.battle.scene.Wall;
 	import com.hotmaze.resource.*;
 	import com.pblabs.animation.*;
+	import com.pblabs.box2D.*;
 	import com.pblabs.engine.PBE;
 	import com.pblabs.engine.core.*;
 	import com.pblabs.engine.entity.*;
@@ -54,6 +55,9 @@ package
 			createBackground();
 			
 			createHero();
+			
+			createWall();
+			
 		}
 		
 		private function createScene():void {
@@ -126,9 +130,24 @@ package
 			
 			
 			// Add dimensions to our hero
-			var _spatial	:SimpleSpatialComponent = new SimpleSpatialComponent();
+			var _spatial	:Box2DSpatialComponent = new Box2DSpatialComponent();
 			_spatial.size = new Point(50, 50);
 			_spatial.position = new Point(0, 0);
+			_spatial.canRotate = false;
+			_spatial.canSleep = false;
+			_spatial.collidesWithTypes = new ObjectType("Wall");
+			var colShape:CollisionShape = new CollisionShape();
+			var array:Array = new Array();
+			
+			var collisionShapes:CircleCollisionShape = new CircleCollisionShape();
+			collisionShapes.offset = new Point(0, 0.5);
+			collisionShapes.radius = 0.5;
+			array.push(collisionShapes);
+			_spatial.collisionShapes = array;
+			
+			_spatial.collisionType = new ObjectType(new Array("hero", "Renderable"));
+			
+//			_spatial.spatialManager = PBE.spatialManager;
 			
 			_hero.addComponent(_spatial, "Spatial");
 			
@@ -207,9 +226,15 @@ package
 			_hero.addComponent(_input, "Controller");
 			
 			
-			_hero.initialize();
+			_hero.initialize("hero");
 		}
 		
+		
+		private function createWall():void {
+			
+			var _wall:IEntity = allocateEntity();
+			var wall:Wall = new Wall(_wall, 100,100);
+		}
 		
 		private function loadXml():void {
 			

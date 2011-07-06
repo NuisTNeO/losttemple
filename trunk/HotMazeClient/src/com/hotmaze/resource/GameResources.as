@@ -25,6 +25,9 @@ package com.hotmaze.resource
 		[Embed(source="../assets/Images/bg.jpg")]
 		public var resBg:Class;
 		
+		[Embed(source="../assets/Images/Wall/wall1.png")]
+		public var wall1:Class;
+		
 		//ROLE
 		[Embed(source="../assets/Images/fanship.png")]
 		public var resShip:Class;
