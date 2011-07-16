@@ -8,6 +8,7 @@ package com.hotmaze.resource
 		{
 			super();
 		}
+		/*
 		//PBE
 		[Embed(source='../assets/pbeThings/common.pbe', mimeType='application/octet-stream')]
 		public var commonpbe:Class;
@@ -45,6 +46,6 @@ package com.hotmaze.resource
 		public var moveleftup:Class;
 		
 		
-		
+		*/
 	}
 }
