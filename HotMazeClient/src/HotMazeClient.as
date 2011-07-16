@@ -55,6 +55,8 @@ package
 			createBackground();
 			
 			createHero();
+	
+			loadXml();
 			
 			createWall();
 			
@@ -238,8 +240,7 @@ package
 		
 		private function loadXml():void {
 			
-			var loadXml:LoadXML = new LoadXML();
-			
+			var loadXml:MapXmlLoader = new MapXmlLoader("assets/map/map_list.xml");
 			trace("success!");
 		}
 	}
