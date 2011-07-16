@@ -23,7 +23,6 @@ package
 	import flash.utils.getTimer;
 	
 	import mx.resources.ResourceManager;
-	
 	/**
 	 * ...
 	 * @author LeonHe

@@ -9,13 +9,15 @@ package com.hotmaze.resource
 
 	public class LoadXML extends Sprite
 	{
+		private var xmlPath:String = new String();
 		
 		private var loader:URLLoader = new URLLoader();
 		
 //		private var loadList:Vector = new Vector();
 		
-		public function LoadXML()
+		public function LoadXML(string:String)
 		{
+			xmlPath = string;
 			init();
 		}
 		
@@ -23,27 +25,11 @@ package com.hotmaze.resource
 			
 			loader.dataFormat = LoadAssetType.TEXT;
 			loader.addEventListener(Event.COMPLETE, handleComplete);
-			loader.load(new URLRequest("../assets/map/map_list.xml"));
+			loader.load(new URLRequest(xmlPath));
 		}
 		
-		private function handleComplete(event:Event):void {
-			
-			try{
-				var xml:XML = new XML(event.target.data);
-				trace(xml.toString());
-				var elements:XMLList = xml.elements();
-				
-				for each(var e:XML in elements) {
-					trace(e.@index);
-					trace(e.@map_name);
-				}
-			} catch(e:TypeError) {
-				trace("Could not parse text into XML");
-				trace(e.message);
-			} finally {
-				
-			}
-			
+		public function handleComplete(event:Event):void{
+		
 		}
 	}
 }
